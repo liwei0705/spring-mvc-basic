@@ -18,7 +18,7 @@
     <!-- 使用默认的注解映射 --> 
     <mvc:annotation-driven>
             <mvc:message-converters register-defaults="true">
-            <!-- 配置Fastjson支持 -->
+            <!-- 配置Fastjson支持(此为SpringMVC4支持的写法) -->
             <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
                 <property name="supportedMediaTypes">
                     <list>
@@ -35,6 +35,7 @@
             </bean>
         </mvc:message-converters>
     </mvc:annotation-driven>
+    
     <!-- 自动扫描controller包中的控制器 -->
 	<context:component-scan base-package="org.jiagoushi.spring_mvc_basic.controller" />
 
